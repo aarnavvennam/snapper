@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Snappers | Columbia Dive Bar</title>
+<title>Snapper’s Bar | Columbia Dive Bar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
@@ -13,6 +13,7 @@ body {
   color: white;
   scroll-behavior: smooth;
 }
+a { color: inherit; text-decoration: none; }
 
 .hero {
   height: 100vh;
@@ -24,7 +25,6 @@ body {
   text-align: center;
   color: #fff;
 }
-
 .hero video {
   position: absolute;
   top: 0; left: 0;
@@ -33,7 +33,6 @@ body {
   object-fit: cover;
   z-index: -2;
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -42,7 +41,6 @@ body {
   background: rgba(0,0,0,0.6);
   z-index: -1;
 }
-
 .hero h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 70px;
@@ -50,24 +48,20 @@ body {
   text-shadow: 0 0 20px #ff0055, 0 0 40px #ff2a6d;
   animation: glow 1.5s ease-in-out infinite alternate;
 }
-
 @keyframes glow {
   0% { text-shadow: 0 0 10px #ff0055, 0 0 20px #ff2a6d; }
   100% { text-shadow: 0 0 20px #ff0055, 0 0 60px #ff2a6d; }
 }
-
 .hero p {
   font-size: 22px;
   color: #ccc;
   margin-top: 20px;
   text-shadow: 0 0 10px #000;
 }
-
 .btn {
   margin-top: 30px;
   padding: 16px 36px;
   border-radius: 30px;
-  text-decoration: none;
   background: #ff0055;
   color: white;
   font-weight: bold;
@@ -75,26 +69,22 @@ body {
   transition: 0.3s;
   box-shadow: 0 0 10px #ff0055;
 }
-
 .btn:hover {
   background: #ff2a6d;
   box-shadow: 0 0 30px #ff2a6d;
 }
-
 .section {
   padding: 80px 20px;
   text-align: center;
   position: relative;
   z-index: 1;
 }
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-
 .card {
   background: #111;
   padding: 30px;
@@ -103,16 +93,11 @@ body {
   transition: 0.3s;
   box-shadow: 0 0 10px #ff0055;
 }
-
 .card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 0 30px #ff2a6d;
 }
-
-.highlight {
-  color: #ff0055;
-}
-
+.highlight { color: #ff0055; }
 .quote {
   font-style: italic;
   color: #aaa;
@@ -121,38 +106,58 @@ body {
   animation: fadeUp 1.5s ease forwards;
   opacity: 0;
 }
-
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
   from { opacity: 0; transform: translateY(20px); }
 }
-
-/* PHOTO GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   margin-top: 40px;
 }
-
 .gallery img {
   width: 100%;
   border-radius: 15px;
   transition: transform 0.4s, box-shadow 0.4s;
 }
-
 .gallery img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px #ff2a6d;
 }
-
-/* FOOTER */
+.info-box {
+  background: #111;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #ff0055;
+}
+.info-box h3 { color: #ff0055; margin-bottom: 10px; }
+.newsletter input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 30px;
+  border: none;
+  margin-right: 10px;
+}
+.newsletter button {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background: #ff0055;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.newsletter button:hover { background: #ff2a6d; }
 .footer {
   padding: 40px;
   text-align: center;
   color: #666;
   background: #050505;
 }
+.footer a { color: #ff0055; margin: 0 10px; }
 </style>
 </head>
 <body>
@@ -163,19 +168,16 @@ body {
     <source src="https://cdn.pixabay.com/vimeo/409858178/Party-14804.mp4" type="video/mp4">
   </video>
   <div>
-    <h1>SNAPPERS</h1>
+    <h1>SNAPPER’S BAR</h1>
     <p>Cheap drinks. Loud nights. Real people.</p>
-    <a class="btn" href="https://maps.google.com">Get Directions</a>
+    <a class="btn" href="https://www.google.com/maps/place/12+S+7th+St,+Columbia,+MO+65201">Get Directions</a>
   </div>
 </div>
 
 <!-- VIBE -->
 <div class="section">
   <h2>Columbia’s Last Real Dive</h2>
-  <p>
-    No dress code. No bullshit. Just strong drinks, good music,
-    and people you actually want to be around.
-  </p>
+  <p>No dress code. No bullshit. Just strong drinks, good music, and people you actually want to be around.</p>
 </div>
 
 <!-- FEATURES -->
@@ -200,11 +202,52 @@ body {
 <div class="section">
   <h2>Catch the Vibe</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1529253355930-c1741b272c5e" alt="Cocktails">
-    <img src="https://images.unsplash.com/photo-1533777324565-a040eb52fac2" alt="Crowd">
-    <img src="https://images.unsplash.com/photo-1525391757361-1fdfd8f983a3" alt="DJ Night">
-    <img src="https://images.unsplash.com/photo-1515165562835-c9463c2b2ec3" alt="Pool Table">
+    <img src="images/snappers-outside.jpg" alt="Snapper’s Front">
+    <img src="images/snappers-interior.jpg" alt="Inside Snapper’s">
+    <img src="images/snappers-dj.jpg" alt="DJ Night">
+    <img src="images/snappers-crowd.jpg" alt="Crowd">
   </div>
+</div>
+
+<!-- CONTACT / INFO -->
+<div class="section">
+  <h2>Visit or Contact Us</h2>
+  <div class="info-box">
+    <h3>📍 Address</h3>
+    <p>12 S. 7th Street, Columbia, MO 65201</p>
+    <h3>📞 Phone</h3>
+    <p>(573) 256‑4901</p>
+    <h3>🕒 Hours</h3>
+    <p>Wed–Sat: ~4 PM – 1 AM | Sun–Tue: Closed</p>
+    <h3>🌐 Follow Us</h3>
+    <p>
+      <a href="https://www.facebook.com/snapperscomo">Facebook</a>
+    </p>
+  </div>
+</div>
+
+<!-- GOOGLE MAPS EMBED -->
+<div class="section">
+  <h2>Find Us on the Map</h2>
+  <div style="width:100%; height:350px; margin: 0 auto;">
+    <iframe
+      width="100%"
+      height="100%"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.418820761441!2d-92.3308860848926!3d38.95122697962602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cff8f5913ae959%3A0x7a3d45da41d30be!2sSnapper%27s!5e0!3m2!1sen!2sus!4v1700000000000"
+    ></iframe>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="section newsletter">
+  <h2>Stay Updated</h2>
+  <p>Sign up for special events, drink specials, and more.</p>
+  <input type="email" placeholder="Enter your email">
+  <button>Subscribe</button>
 </div>
 
 <!-- SOCIAL PROOF -->
@@ -219,12 +262,13 @@ body {
 <div class="section">
   <h2>Pull Up Tonight</h2>
   <p>No reservations. No expectations. Just show up.</p>
-  <a class="btn" href="https://maps.google.com">Find Snappers</a>
+  <a class="btn" href="https://www.google.com/maps/place/12+S+7th+St,+Columbia,+MO+65201">Find Snapper’s Bar</a>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © Snappers — Columbia, Missouri
+  © Snapper’s Bar — Columbia, Missouri<br>
+  <a href="https://www.facebook.com/snapperscomo">Facebook</a>
 </div>
 
 </body>
